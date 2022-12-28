@@ -7,4 +7,6 @@ require("melxaco.plugins.nvim-tree")
 require("melxaco.plugins.lualine")
 require("melxaco.plugins.telescope")
 require("melxaco.plugins.nvim-cmp")
-
+require("melxaco.plugins.lsp.mason")
+require("melxaco.plugins.lsp.lspsaga")
+require("melxaco.plugins.lsp.lspconfig")

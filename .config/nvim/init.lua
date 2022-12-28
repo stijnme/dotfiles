@@ -6,3 +6,5 @@ require("melxaco.plugins.comment")
 require("melxaco.plugins.nvim-tree")
 require("melxaco.plugins.lualine")
 require("melxaco.plugins.telescope")
+require("melxaco.plugins.nvim-cmp")
+

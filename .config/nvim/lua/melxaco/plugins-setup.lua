@@ -28,6 +28,14 @@ return require('packer').startup(function(use)
   use "numToStr/Comment.nvim" -- comments with gc
 
   use "nvim-tree/nvim-tree.lua" -- file explorer
+--  use "kyazdani42/nvim-web-devicons" -- file icons
+  use "nvim-tree/nvim-web-devicons"  -- file icons
+
+  use "nvim-lualine/lualine.nvim" -- statusbar
+
+  -- fuzzy finding w/ telescope
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

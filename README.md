@@ -32,3 +32,8 @@ dotconfig push
 ## Prerequisite
 For `nvimtree` and `nvim-web-devicons` a nerdfont is required (has extra icons included):
 [Nerdfonts download](https://www.nerdfonts.com/font-downloads)
+
+
+# Credits
+## nvim
+`nvim` config heavily inspired by [Josean](https://github.com/josean-dev/dev-environment-files)

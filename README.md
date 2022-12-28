@@ -26,6 +26,35 @@ dotconfig push
 ```
 
 # Restore
+## dotconfig command
+OSX uses by default zsh, but `.zshrc` contains:
+```
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+```
+Hence, added to `.bash_aliases`:
+```
+alias dotconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```
+Source the configuration again:
+```
+source ~/.zshrc
+```
+
+## Clone
+Clone this repo into a bare version:
+```
+git clone --bare git@github.com:stijnme/dotfiles.git $HOME/.cfg
+```
+
+## Checkout
+Checkout the bare repo into the current "workdir":
+```
+cd ~
+dotconfig checkout
+dotconfig config --local status.showUntrackedFiles no
+```
 
 
 # nvim

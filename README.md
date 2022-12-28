@@ -26,3 +26,9 @@ dotconfig push
 ```
 
 # Restore
+
+
+# nvim
+## Prerequisite
+For `nvimtree` and `nvim-web-devicons` a nerdfont is required (has extra icons included):
+[Nerdfonts download](https://www.nerdfonts.com/font-downloads)

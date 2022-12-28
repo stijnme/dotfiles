@@ -3,7 +3,7 @@ if not setup then
   return
 end
 
--- recommended settings from docu
+-- recommended settings from docu to disable netrw
 vim.g.load=1
 vim.g.loaded_netrwPlugin=1
 

@@ -4,4 +4,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# If not running interactively, stop here
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# Load bash-powerline
 source ~/.bash-powerline.sh

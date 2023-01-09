@@ -1,2 +1,2 @@
-source .bash-powerline.sh
-alias dotconfig='/usr/bin/git --git-dir=/Users/stijn/.cfg/ --work-tree=/Users/stijn'
+source ~/.bash-powerline.sh
+alias dotconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

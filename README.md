@@ -74,8 +74,12 @@ dotconfig config --local status.showUntrackedFiles no
 
 ## Prerequisite
 
-For `nvimtree` and `nvim-web-devicons` a nerdfont is required (has extra icons included):
-[Nerdfonts download](https://www.nerdfonts.com/font-downloads)
+- For `nvimtree` and `nvim-web-devicons` a nerdfont is required (has extra icons included): [Nerdfonts download](https://www.nerdfonts.com/font-downloads)
+- To use live grep in `Telescope`, the external tool `ripgrep` is required:
+
+```
+sudo apt-get install ripgrep
+```
 
 ## Install
 

@@ -81,6 +81,12 @@ dotconfig config --local status.showUntrackedFiles no
 sudo apt-get install ripgrep
 ```
 
+- For certain tree-sitter parsers, the tree-sitter-cli is required (and should be added to `PATH`):
+
+```
+npm -g install tree-sitter-cli
+```
+
 ## Install
 
 After clonin the files in the `.config/nvim` folder, start `nvim` and execute following commands:

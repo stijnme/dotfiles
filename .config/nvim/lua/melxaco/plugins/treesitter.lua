@@ -28,8 +28,10 @@ treesitter.setup({
     "lua",
     "vim",
     "dockerfile",
---    "gitignore", -- requires tree-sitter cli
+    "gitignore", -- requires tree-sitter cli
   },
-  -- auto install above language parsers
+  -- don't install markdown due to compile errors
+  ignore_install = { "markdown" },
+  -- auto install language parsers
   auto_install = true,
 })

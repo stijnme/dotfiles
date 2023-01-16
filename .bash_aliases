@@ -5,3 +5,12 @@ alias dotconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # jWorksheet timetracker
 alias jWorkSheet='java -jar jWorkSheetSetup.0.90/jWorkSheet.jar'
+
+
+# Git aliasses
+alias ga="git add"
+alias gc="git commit -m"
+alias gg="git pull"
+alias gp="git push"
+alias gs="git status"
+

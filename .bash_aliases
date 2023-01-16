@@ -10,7 +10,8 @@ alias jWorkSheet='java -jar jWorkSheetSetup.0.90/jWorkSheet.jar'
 # Git aliasses
 alias ga="git add"
 alias gc="git commit -m"
+alias gd="git diff"
+alias gds="git diff --staged"
 alias gg="git pull"
 alias gp="git push"
 alias gs="git status"
-

@@ -12,3 +12,4 @@ esac
 
 # Load bash-powerline
 source ~/.bash-powerline.sh
+export PATH="$HOME/.local/bin:$PATH"

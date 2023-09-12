@@ -16,3 +16,6 @@ alias gg="git pull"
 alias gl="git log --name-status"
 alias gp="git push"
 alias gs="git status"
+
+# List top processes that use the most memory
+alias psmem="ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head"

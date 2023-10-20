@@ -4,7 +4,7 @@ if not setup then
   return
 end
 
--- for conciseness
+-- for conciseness = shorter variables
 local formatting = null_ls.builtins.formatting -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 

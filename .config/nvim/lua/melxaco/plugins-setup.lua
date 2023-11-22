@@ -49,7 +49,11 @@ return require('packer').startup(function(use)
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+  -- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+  use { -- issue on current main branch: https://github.com/nvimdev/lspsaga.nvim/issues/555
+    'glepnir/lspsaga.nvim',
+    commit = 'ae099d5844b005cec66a66ab30a44d3bf8867af9',
+  }
   use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 

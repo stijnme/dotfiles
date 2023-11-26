@@ -16,6 +16,23 @@ if not typescript_setup then
   return
 end
 
+-- need to setup config manually because cds-lsp is not (yet) known in lspconfig server_configurations
+local configs_setup, configs = pcall(require, "lspconfig.configs")
+if not configs_setup then
+  return
+end
+
+-- Add config cds-lsp
+configs.cds_lsp = {
+  default_config = {
+    cmd = { 'cds-lsp', '--stdio' };
+    filetypes = {'cds'};
+    root_dir = function(fname)
+      return vim.fn.getcwd()
+    end;
+  };
+};
+
 local keymap = vim.keymap
 
 -- enable keybinds only for when lsp server available
@@ -67,5 +84,28 @@ lspconfig["cssls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
+
+-- configure css server
+lspconfig["lua_ls"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+-- cds-lsp
+if lspconfig["cds_lsp"].setup then
+  vim.notify("Calling cds_lsp setup", vim.log.levels.WARN)
+  lspconfig["cds_lsp"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+end
+
+-- Add cds file type
+vim.cmd([[
+augroup MyCDSCode
+     autocmd!
+     autocmd BufReadPre,FileReadPre *.cds set ft=cds
+augroup END
+]])
 
 -- TODO: also add config for other lsp

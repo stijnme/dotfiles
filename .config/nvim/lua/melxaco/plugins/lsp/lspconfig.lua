@@ -22,17 +22,6 @@ if not configs_setup then
   return
 end
 
--- Add config cds-lsp
-configs.cds_lsp = {
-  default_config = {
-    cmd = { 'cds-lsp', '--stdio' };
-    filetypes = {'cds'};
-    root_dir = function(fname)
-      return vim.fn.getcwd()
-    end;
-  };
-};
-
 local keymap = vim.keymap
 
 -- enable keybinds only for when lsp server available

@@ -12,6 +12,13 @@ opt.shiftwidth=2
 
 -- line wrapping
 opt.wrap=false
+-- line wrapping set for Markdown files
+vim.cmd( [[
+augroup WrapLineInMarkdownFile
+  autocmd!
+  autocmd BufRead,BufNewFile *.md set wrap
+augroup END
+]])
 
 -- search settings
 opt.ignorecase=true --default search with lowercase search term ignores the case in the result

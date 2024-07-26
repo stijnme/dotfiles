@@ -18,3 +18,6 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 
 -- copy to clipboard
 keymap.set("v", "<leader>c", ":w !clip.exe") -- See: https://stackoverflow.com/questions/61550552/how-to-copy-paste-from-vim-in-wsl
+
+-- copilot
+keymap.set("n", "<leader>cop", "<cmd>Copilot<cr>") -- list 10 copilot suggestions

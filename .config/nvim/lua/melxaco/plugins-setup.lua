@@ -80,7 +80,7 @@ return require('packer').startup(function(use)
   use("ThePrimeagen/vim-be-good") -- vim game to practice movements
 
   -- AI
-  use 'Exafunction/codeium.vim'
+  -- use('Exafunction/codeium.vim') -- replaced with Copilot
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

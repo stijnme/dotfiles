@@ -82,6 +82,14 @@ return require('packer').startup(function(use)
   -- AI
   -- use('Exafunction/codeium.vim') -- replaced with Copilot
 
+  -- Markdown
+  -- Follow markdown links in normal mode with <cr>
+  use("jghauser/follow-md-links.nvim")
+  -- Make sure following 2 TSInstall plugins are installed:
+  -- * markdown
+  -- * markdown_inline
+  -- cmd: TSInstall markdown markdown_inline
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

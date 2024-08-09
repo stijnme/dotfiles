@@ -24,6 +24,7 @@ treesitter.setup({
     "html",
     "css",
 --    "markdown", -- compile errors while installing
+--    "markdown_inline",
     "bash",
     "lua",
     "vim",

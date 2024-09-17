@@ -1,3 +1,5 @@
+print("[D] Loading keymaps (core.keymaps)")
+
 vim.g.mapleader=" " -- default in vim is backspace
 
 local keymap = vim.keymap

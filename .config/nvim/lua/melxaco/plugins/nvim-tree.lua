@@ -1,22 +1,13 @@
-local setup, tree = pcall(require, "nvim-tree")
-if not setup then
-  return
-end
+print("[D] Setup plugin nvim-tree (melxaco.plugins.nvim-tree)")
 
--- recommended settings from docu to disable netrw
-vim.g.load=1
-vim.g.loaded_netrwPlugin=1
-
-tree.setup({
--- change folder arrow icons
-  renderer = {
-    icons = {
-      glyphs = {
-        folder = {
-          arrow_closed = "", -- arrow when folder is closed
-          arrow_open = "", -- arrow when folder is open
-        },
-      },
-    },
-  }
-})
+return {
+  "nvim-tree/nvim-tree.lua",
+  version = "*",
+  lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    require("nvim-tree").setup {}
+  end,
+}

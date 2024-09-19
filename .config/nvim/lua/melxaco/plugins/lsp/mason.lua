@@ -29,7 +29,7 @@ mason_lspconfig.setup({
     "eslint",
     "html",
     "jsonls",
-    "tsserver",
+    "ts_ls",
     "sqlls",
     "yamlls"
   }

@@ -12,14 +12,21 @@ flowchart TD
   coreColor(core/colorscheme.lua)
   coreKeymap(core/keymaps.lua)
   coreOption(core/options.lua)
+  pluginDir(plugins/*.lua)
 
   rootInit --> rootMelxaco
 
   subgraph melxaco
     rootMelxaco --> coreOption
-    coreOption --> coreKeymap
-    coreKeymap --> configLazy
-    configLazy --> plugins
+    subgraph core
+      coreOption --> coreKeymap
+    end
+    subgraph config
+      coreKeymap --> configLazy
+    end
+    subgraph plugins
+      configLazy --> pluginFolder
+    end
     plugins --> colorscheme
   end
 

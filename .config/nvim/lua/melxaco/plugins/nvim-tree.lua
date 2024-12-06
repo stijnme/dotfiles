@@ -8,6 +8,10 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
+    -- recommended settings from docu to disable netrw
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
+
     require("nvim-tree").setup {
       -- change folder arrow icons
       renderer = {

@@ -1,10 +1,6 @@
 print("[D] Initialize lua setup (init.lua)")
 
---require("melxaco.plugins-setup")
-require("melxaco.config.lazy")
-require("melxaco.core.options")
-require("melxaco.core.keymaps")
-require("melxaco.core.colorscheme")
+require("melxaco")
 --require("melxaco.plugins.comment")
 --require("melxaco.plugins.nvim-tree")
 -- require("melxaco.plugins.lualine")

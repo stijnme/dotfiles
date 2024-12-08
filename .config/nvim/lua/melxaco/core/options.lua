@@ -1,3 +1,4 @@
+print("[D] Setup vim (core.options)")
 local opt = vim.opt
 
 -- line numbers

@@ -27,7 +27,6 @@ flowchart TD
     subgraph plugins
       configLazy --> pluginFolder
     end
-    plugins --> colorscheme
   end
 
 ``` 

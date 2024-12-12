@@ -23,7 +23,8 @@ return {
             }
           }
         }
-      }
+      },
+      view = {relativenumber = true}
     }
   end,
 }

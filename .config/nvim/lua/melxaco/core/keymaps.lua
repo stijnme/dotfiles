@@ -23,3 +23,6 @@ keymap.set("v", "<leader>c", ":w !clip.exe") -- See: https://stackoverflow.com/q
 
 -- copilot
 keymap.set("n", "<leader>cop", "<cmd>Copilot<cr>") -- list 10 copilot suggestions
+
+-- obsidian
+keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>") -- open current file in obsidian

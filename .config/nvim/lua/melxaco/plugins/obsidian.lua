@@ -21,7 +21,7 @@ return {
     workspaces = {
       {
         name = "work",
-        path = "/mnt/c/Users/smertens.EXPERTUM-PC-SME/OneDrive - Expertum/Notes/Notes-Obsedian/ExpertumVault",
+        path = "/Users/stijn/OneDrive-Expertum/Notes/Notes-Obsedian/ExpertumVault",
       },
     },
     -- see below for full list of options 👇

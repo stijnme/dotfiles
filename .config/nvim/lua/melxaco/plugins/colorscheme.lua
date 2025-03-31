@@ -1,5 +1,3 @@
-print("[D] Colorscheme loading (melxaco.core.colorscheme)")
-
 return {
   "bluz71/vim-nightfly-colors",
   name = "nightfly",

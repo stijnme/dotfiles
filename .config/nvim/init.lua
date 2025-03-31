@@ -1,5 +1,3 @@
-print("[D] Initialize lua setup (init.lua)")
-
 require("melxaco")
 --require("melxaco.plugins.comment")
 --require("melxaco.plugins.nvim-tree")

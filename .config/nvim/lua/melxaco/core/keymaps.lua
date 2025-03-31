@@ -1,11 +1,10 @@
-print("[D] Loading keymaps (core.keymaps)")
-
 vim.g.mapleader=" " -- default in vim is backspace
 
 local keymap = vim.keymap
 
 --keymap.set("n","j","jzz")
 --keymap.set("n","k","kzz")
+keymap.set("i","jj","<Esc>", { noremap = false }) -- remap jj to <Esc> in insert mode
 
 -- nvim-tree
 keymap.set("n","<leader>e",":NvimTreeToggle<CR>")

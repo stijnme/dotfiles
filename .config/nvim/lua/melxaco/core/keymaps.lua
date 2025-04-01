@@ -25,3 +25,4 @@ keymap.set("n", "<leader>cop", "<cmd>Copilot<cr>") -- list 10 copilot suggestion
 
 -- obsidian
 keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>") -- open current file in obsidian
+keymap.set("n", "<leader>ot", "<cmd>ObsidianTOC<cr>") -- open the TOC of the current note

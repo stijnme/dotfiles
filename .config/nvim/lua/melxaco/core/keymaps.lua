@@ -26,7 +26,6 @@ keymap.set("n", "<leader>cop", "<cmd>Copilot<cr>") -- list 10 copilot suggestion
 -- obsidian
 keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>") -- open current file in obsidian
 keymap.set("n", "<leader>ot", "<cmd>ObsidianTOC<cr>") -- open the TOC of the current note
-keymap.set("n", "<leader>op", "<cmd>ObsidianPasteImg<cr>") -- paste image in obsidian
 keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>") -- search in obsidian vault
 
 -- clipboard-img

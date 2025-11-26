@@ -23,6 +23,10 @@ return {
         name = "work",
         path = "~/OneDrive-Expertum/Notes/Notes-Obsedian/ExpertumVault",
       },
-    },
+      {
+        name = "personal",
+        path = "~/OneDrive-Expertum/Notes/Notes-Obsedian/MEDBVault",
+      },
+     },
   },
 }

@@ -92,10 +92,11 @@ npm -g install tree-sitter-cli
 After clonin the files in the `.config/nvim` folder, start `nvim` and execute following commands:
 
 ```
-:PackerSync
+:Lazy
 ```
 
-To install the nvim packages with Packer.
+Install the packages listed in the `Lazy` configuration.
+
 Next is launching Mason to install the necessary LSP, linter and formatting packages:
 
 ```

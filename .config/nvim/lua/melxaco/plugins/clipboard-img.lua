@@ -13,7 +13,7 @@ return {
         --img_name = function() return os.date('%Y-%m-%d-%H-%M-%S') end, -- Example result: "2021-04-13-10-04-18"
         img_name = function ()
           vim.fn.inputsave()
-          local name = vim.fn.input('Image name: ')
+          local name = vim.fn.input('[📷] Image name: ')
           vim.fn.inputrestore()
           return name
         end,

@@ -1,46 +1,37 @@
--- import mason plugin safely
-local mason_status, mason = pcall(require, "mason")
-if not mason_status then
-  return
-end
-
--- import mason-lspconfig plugin safely
-local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
-if not mason_lspconfig_status then
-  return
-end
-
--- import mason-null-ls plugin safely
-local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
-if not mason_null_ls_status then
-  return
-end
-
--- enable mason
-mason.setup()
-
-mason_lspconfig.setup({
-  -- list of servers for mason to install
-  ensure_installed = {
-    "bashls",
+--print(os.time() .. " [D] mason config running")
+return {
+  "mason-org/mason-lspconfig.nvim",
+  opts = {
+    ensure_installed = {
+      "bashls",
 --    "clangd",
 --    "cmake",
-    "cssls",
-    "eslint",
-    "html",
-    "jsonls",
-    "ts_ls",
-    "sqlls",
-    "yamlls"
-  }
-})
-
-mason_null_ls.setup({
-  -- list of formatters & linters for mason to install
-  ensure_installed = {
-    "prettier", -- ts/js formatter
-    "eslint_d", -- ts/js linter
+      "cds-lsp",
+      "cssls",
+      "eslint",
+      "html",
+      "jsonls",
+      "lua_ls",
+      "ts_ls",
+      "sqlls",
+      "yamlls"
+    },
   },
-  -- auto-install configured formatters & linters (with null-ls)
-  automatic_installation = true,
-})
+  dependencies = { -- following need to load before mason-lspconfig
+    {
+      "mason-org/mason.nvim",
+      opts = {
+        ui = {
+          icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+          }
+        }
+      },
+    },
+    {
+      "nvim-lspconfig", -- see other config file
+    }
+  },
+}

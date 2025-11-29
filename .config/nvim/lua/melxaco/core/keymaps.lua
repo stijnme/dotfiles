@@ -4,9 +4,11 @@ local keymap = vim.keymap
 
 --keymap.set("n","j","jzz")
 --keymap.set("n","k","kzz")
+keymap.set("i","jj","<Esc>", { noremap = false }) -- remap jj to <Esc> in insert mode
 
 -- nvim-tree
-keymap.set("n","<leader>e",":NvimTreeToggle<CR>")
+keymap.set("n","<leader>e",":NvimTreeToggle<cr>") -- toggle file explorer
+keymap.set("n","<leader>gf",":NvimTreeFindFile<cr>") -- find/navigate to the  current file in nvim-tree
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -20,4 +22,14 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 keymap.set("v", "<leader>c", ":w !clip.exe") -- See: https://stackoverflow.com/questions/61550552/how-to-copy-paste-from-vim-in-wsl
 
 -- copilot
-keymap.set("n", "<leader>cop", "<cmd>Copilot<cr>") -- list 10 copilot suggestions
+keymap.set("n", "<leader>cop", "<cmd>Copilot panel<cr>") -- list 10 copilot suggestions
+
+
+-- obsidian
+keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>") -- open current file in obsidian
+keymap.set("n", "<leader>ot", "<cmd>ObsidianTOC<cr>") -- open the TOC of the current note
+keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>") -- search in obsidian vault
+
+-- clipboard-img
+keymap.set("n", "<leader>pi", "<cmd>PasteImg<cr>") -- paste image in current file
+

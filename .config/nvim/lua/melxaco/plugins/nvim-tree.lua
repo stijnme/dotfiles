@@ -1,22 +1,28 @@
-local setup, tree = pcall(require, "nvim-tree")
-if not setup then
-  return
-end
+return {
+  "nvim-tree/nvim-tree.lua",
+  version = "*",
+  lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    -- recommended settings from docu to disable netrw
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
 
--- recommended settings from docu to disable netrw
-vim.g.load=1
-vim.g.loaded_netrwPlugin=1
-
-tree.setup({
--- change folder arrow icons
-  renderer = {
-    icons = {
-      glyphs = {
-        folder = {
-          arrow_closed = "", -- arrow when folder is closed
-          arrow_open = "", -- arrow when folder is open
-        },
+    require("nvim-tree").setup {
+      -- change folder arrow icons
+      renderer = {
+        icons = {
+          glyphs = {
+            folder = {
+              arrow_closed = "→", -- arrow when folder is closed
+              arrow_open = "↓", -- arrow when folder is open
+            }
+          }
+        }
       },
-    },
-  }
-})
+      view = {relativenumber = true}
+    }
+  end,
+}

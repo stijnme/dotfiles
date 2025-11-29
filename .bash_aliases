@@ -1,7 +1,12 @@
 alias eocBuildDev="grunt buildDev && cordova build android"
 #alias eocBuildDev="grunt buildDev && cordova build android && mv platforms/android/app/build/outputs/apk/debug/app-debug.apk $1"
-alias cdwin="cd /mnt/c/Users/smertens.EXPERTUM-PC-SME/"
+
+# dotconfig
 alias dotconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# navigation
+alias cdwin="cd /mnt/c/Users/smertens.EXPERTUM-PC-SME/"
+alias cdn="cd ~/OneDrive-Expertum/Notes/Notes-Obsedian/ExpertumVault/"
 
 # jWorksheet timetracker
 alias jWorkSheet='java -jar jWorkSheetSetup.0.90/jWorkSheet.jar'

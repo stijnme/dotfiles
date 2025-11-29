@@ -1,26 +1,32 @@
--- import telescope plugin safely
-local telescope_setup, telescope = pcall(require, "telescope")
-if not telescope_setup then
-  return
-end
-
--- import telescope actions safely
-local actions_setup, actions = pcall(require, "telescope.actions")
-if not actions_setup then
-  return
-end
-
-telescope.setup({
-  -- configure custom mappings
-  defaults = {
-    mappings = {
-      i = {
-        ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-        ["<C-j>"] = actions.move_selection_next, -- move to next result
-        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
-      },
-    },
+return {
+  "nvim-telescope/telescope.nvim", tag = "0.1.8",
+-- or                              , branch = '0.1.x',
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- dependency for better sorting performance0
   },
-})
+--  dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
+  config = function()
+    local telescope = require("telescope")
+    local actions = require("telescope.actions")
 
-telescope.load_extension("fzf")
+
+    telescope.setup({
+      defaults = {
+         prompt_prefix = "❯ ",
+         selection_caret = "❯ ",
+        mappings = {
+          i = {
+            -- map actions.which_key to <C-h> (default: <C-/>)
+            -- actions.which_key shows the mappings for your picker,
+            -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+            ["<C-h>"] = "which_key",
+            ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+            ["<C-j>"] = actions.move_selection_next, -- move to next result
+            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+          }
+        }
+      }
+    })
+  end,
+}

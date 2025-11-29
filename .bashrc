@@ -13,6 +13,8 @@ esac
 # Load bash-powerline
 source ~/.bash-powerline.sh
 export PATH="$HOME/.local/bin:$PATH"
+
+# BTP cli
 SAP_BTP_CLI_AUTOCOMPLETE="$HOME/.config/.btp/autocomplete/scripts/sapbtpcli-autocomplete.plugin.sh" && source $SAP_BTP_CLI_AUTOCOMPLETE
 
 # nvim

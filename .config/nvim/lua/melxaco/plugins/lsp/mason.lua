@@ -4,7 +4,6 @@ return {
   opts = {
     ensure_installed = {
       "bashls",
-      "bashls",
 --    "clangd",
 --    "cmake",
       "cds-lsp",

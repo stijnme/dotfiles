@@ -6,7 +6,7 @@ return {
       "bashls",
 --    "clangd",
 --    "cmake",
-      "cds-lsp",
+      "cds_lsp",
       "cssls",
       "eslint",
       "html",
@@ -29,6 +29,15 @@ return {
           }
         }
       },
+      -- Next lines only for testing with changes on local mason registry
+      -- config = function()
+      --   require("mason").setup {
+      --     print(os.time() .. " [D] mason config running"),
+      --     registries = { -- add local registry for testing
+      --     "file:~/Development/personal/mason-registry"
+      --   }
+      -- }
+      -- end,
     },
     {
       "nvim-lspconfig", -- see other config file

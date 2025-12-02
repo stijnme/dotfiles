@@ -1,8 +1,5 @@
 print("[D] Config LSP servers...")
 
--- Manually enable the CDS LSP server
--- vim.lsp.enable("cds_lsp");
-
 local keymap = vim.keymap -- for conciseness
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -71,14 +68,3 @@ vim.diagnostic.config({
     },
   },
 })
-
-
--- -- Add cds file type
--- print("[D] Adding CDS file type...")
--- vim.cmd([[
--- augroup MyCDSCode
---      autocmd!
---      autocmd BufReadPre,FileReadPre *.cds set ft=cds
--- augroup END
--- ]])
-

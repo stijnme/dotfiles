@@ -1,4 +1,4 @@
-print("[D] Config LSP servers...")
+-- print("[D] Config LSP servers...")
 
 local keymap = vim.keymap -- for conciseness
 vim.api.nvim_create_autocmd("LspAttach", {

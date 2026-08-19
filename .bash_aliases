@@ -19,6 +19,7 @@ alias gd="git diff"
 alias gds="git diff --staged"
 alias gg="git pull"
 alias gl="git log --name-status"
+alias glg="git log --graph --oneline --date-order --decorate --color --all"
 alias gp="git push"
 alias gs="git status"
 

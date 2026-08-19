@@ -31,3 +31,6 @@ opt.signcolumn="yes"
 
 --clipboard
 opt.clipboard:append("unnamedplus") --use system clipboard buffer
+
+-- obsidian.nvim settings
+opt.conceallevel = 1
